@@ -1,0 +1,38 @@
+
+
+.botonSearch{
+    background: transparent;
+    border-style: none;
+    color: white;
+    margin-left: 10px;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 0 20px lawngreen;
+}
+
+.botonSearch:hover{
+    background-color: lawngreen;
+    color: black;
+}
+
+.divAgregar{
+    display: flex;
+    /* align-items: center; */
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.divAgregar input{
+    box-shadow: 0 0 20px lawngreen;
+    background: transparent;
+    border-radius: 8px;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    font-size: 13px;
+}
+
+
+

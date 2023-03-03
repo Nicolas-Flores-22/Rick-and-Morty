@@ -1,0 +1,20 @@
+.containerCards{
+    /* background-color: white;
+    color: aqua;
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    gap: 1rem;
+    flex-wrap: row; */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    width: fit-content;
+    height: fit-content;
+    background-color: none;
+    border-radius: 5px;
+    margin: 1em;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+}
