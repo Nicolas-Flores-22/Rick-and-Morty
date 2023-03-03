@@ -26,15 +26,15 @@ function App() {
 
 
   const login = (userData) => {
-    // if (userData.username === username && userData.password === password) {
-    //   setAccess(true);
-    //   navigate('/home');
-    // }
+    if (userData.username === username && userData.password === password) {
+      setAccess(true);
+      navigate('/home');
+    }
   }
 
-  // useEffect(() => {
-  //   !access && navigate('/');
-  // }, [access]);
+  useEffect(() => {
+    !access && navigate('/');
+  }, [access]);
 
   const onSearch = (character) => {
     // fetch(`https://rickandmortyapi.com/api/character/${character}`) --> URL DE LA API
