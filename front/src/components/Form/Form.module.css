@@ -22,6 +22,7 @@
     padding: 0;
     color: #fff;
     text-align: center;
+    font-family: 'Zapf-Chancery', cursive;
 }
 
 .loginBox .userBox{
@@ -51,6 +52,10 @@
     transition: .5s;
 }
 
+.userBox input, label, p{
+    font-family: 'Zapf-Chancery', cursive;
+}
+
 .loginBox .userBox input:focus, 
 .loginBox .userBox input:valid~label{
     top: -20px;
@@ -74,6 +79,7 @@
     letter-spacing: 4px;
     box-shadow: 0 0 20px #81B29A;
     background: rgba(0, 0, 0, .6);
+    font-family: 'Zapf-Chancery', cursive;
 }
 
 .loginBox button:hover{
