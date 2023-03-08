@@ -10,6 +10,7 @@
     border-radius: 8px;
     cursor: pointer;
     box-shadow: 0 0 20px lawngreen;
+    font-family: 'Zapf-Chancery', cursive;
 }
 
 .botonSearch:hover{
@@ -32,6 +33,7 @@
     font-weight: bold;
     text-align: center;
     font-size: 13px;
+    font-family: 'Zapf-Chancery', cursive;
 }
 
 

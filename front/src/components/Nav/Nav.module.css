@@ -21,6 +21,7 @@
     border-radius: 5px;
     cursor: pointer;
     box-shadow: 0 0 20px lawngreen;
+    font-family: 'Zapf-Chancery', cursive;
 }
 
 .navSearchDivLink button:hover{
