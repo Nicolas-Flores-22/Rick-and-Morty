@@ -29,26 +29,64 @@
 
 
 // ------ INTEGRACIÓN EXPRESS ------
-const axios = require('axios');
-const URL = "https://rickandmortyapi.com/api/character/";
+// const axios = require('axios');
+// const URL = "https://rickandmortyapi.com/api/character/";
 
-const getCharDetail = (request, response) => {
-    const { id } = request.params;
-    axios(URL + id)
-        .then((res) => {
-            const character = {
-                image: res.data.image,
-                name: res.data.name,
-                gender: res.data.gender,
-                status: res.data.status,
-                origin: res.data.origin.name,
-                species: res.data.species
-            }
-            return response.status(200).json(character);
-        })
-        .catch(error => {
-            response.status(500).json(error.message);
-        })
-};
+// const getCharDetail = async (request, response) => {
+//     const { id } = request.params;
+
+//     if(id){
+//         try {
+//             const response = await axios(URL + id);
+//             const character = {
+//               id: response.data.id,
+//               name: response.data.name,
+//               species: response.data.species,
+//               image: response.data.image,
+//               gender: response.data.gender,
+//               status: response.data.status,
+//               origin: response.data.origin.name,
+//             };
+//             return res.status(200).json(character);
+//           } catch (error) {
+//             return res.status(500).send(error.message);
+//           }
+//     }else{
+//         return response.status(400).send("Debes proveer un id por parametro");
+//     }
+
+//     // axios(URL + id)
+//     //     .then((res) => {
+//     //         const character = {
+//     //             image: res.data.image,
+//     //             name: res.data.name,
+//     //             gender: res.data.gender,
+//     //             status: res.data.status,
+//     //             origin: res.data.origin.name,
+//     //             species: res.data.species
+//     //         }
+//     //         return response.status(200).json(character);
+//     //     })
+//     //     .catch(error => {
+//     //         response.status(500).json(error.message);
+//     //     })
+// };
+
+
+//------- INTEGRACIÓN ORM ------
+const { Favorites } = require('../DB_connection');
+
+const getCharDetail = async (id) => {
+  try {
+    const favoriteDelete = await Favorites.findByPk(id);
+
+    if(!favoriteDelete) throw new Error("No existe el personaje a eliminar");
+
+    favoriteDelete.destroy();
+    return "Favorito eliminado correctamente";
+  } catch (error) {
+    return {error: error.message};
+  }
+}
 
 module.exports = {getCharDetail};

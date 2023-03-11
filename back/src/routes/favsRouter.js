@@ -2,7 +2,7 @@
 // ------ INTEGRACIÓN EXPRESS ------
 
 const { Router } = require('express');
-const { favs } = require('../utils/favs');
+// const { favs } = require('../utils/favs');
 
 
 const favsRouter = Router();
