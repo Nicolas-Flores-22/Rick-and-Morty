@@ -6,7 +6,7 @@ function characterModel(sequelize) {
          type: DataTypes.INTEGER,
          allowNull: false,
          primaryKey: true,
-         autoincrement: true,
+         autoIncrement: true,
       },
       name: {
          type: DataTypes.STRING,
